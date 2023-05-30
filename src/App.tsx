@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface AppProps {
+  message: string;
+}
+
+class App extends Component<AppProps> {
+  render() {
+    return (
+      <div className="App">
+        <h1>{this.props.message}</h1>
+        <svg>
+  <path d="M 20 20 C 20 110, 110 110, 110 20" stroke="black"  fill="transparent" />
+</svg>
+      </div>
+    );
+  }
 }
 
 export default App;
